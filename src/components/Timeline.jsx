@@ -1,8 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Section = styled.section`
+  height: 100vh;
+  background-color: coral;
+`
 
 const Timeline = () => {
   return (
-    <div>Timeline</div>
+    <Section>Timeline</Section>
   )
 }
 

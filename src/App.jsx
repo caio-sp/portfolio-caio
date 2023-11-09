@@ -1,8 +1,9 @@
 import Hero from './components/Hero'
+import Navbar from './components/Navbar'
 import About from './components/About'
 import Works from './components/Works'
 import Timeline from './components/Timeline'
-import Works from './components/Works'
+import Contact from './components/Contact'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <Container>
+      <Navbar />
       <Hero />
       <About />
       <Works />
