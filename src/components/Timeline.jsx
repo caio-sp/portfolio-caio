@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Section = styled.section`
   height: 100vh;
-  background-color: coral;
+  scroll-snap-align: center;
 `
 
 const Timeline = () => {

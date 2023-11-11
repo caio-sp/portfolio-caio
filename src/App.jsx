@@ -1,5 +1,5 @@
 import Hero from './components/Hero'
-import Navbar from './components/Navbar'
+// import Navbar from './components/Navbar'
 import About from './components/About'
 import Works from './components/Works'
 import Timeline from './components/Timeline'
@@ -8,14 +8,22 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   height: 100vh;
-  background-color: rebeccapurple;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  color: white;
+  background: url("./img/bg.jpeg");
+  scrollbar-width: none;
+  &::-webkit-scrollbar{
+    display: none;
+  }
 `
 
 function App() {
 
   return (
     <Container>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <About />
       <Works />
