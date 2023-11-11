@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap'
+import "bootstrap/dist/css/bootstrap.mim.css";
 
 const Section = styled.nav`
   display: flex;
@@ -7,14 +9,28 @@ const Section = styled.nav`
 `
 
 const Container = styled.div`
-
+  width: 1440px;
 `
+const Left = styled.div`
+  flex: 1;
+  width: 100%;
+`
+const Right = styled.div`
+  flex: 1;
+`
+
+const Logo = styled.img`
+  width: 200px;
+`
+
 
 const Navbar = () => {
   return (
     <Section>
       <Container>
-        <Left></Left>
+        <Left>
+          <Logo src="./img/logoCaio.png"/>
+        </Left>
         <Right></Right>
       </Container>
     </Section>
