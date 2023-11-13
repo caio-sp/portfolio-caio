@@ -26,14 +26,14 @@ const Logo = styled.img`
 
 const Navbar = () => {
   return (
-    <Section>
+    <Nav>
       <Container>
         <Left>
           <Logo src="./img/logoCaio.png"/>
         </Left>
         <Right></Right>
       </Container>
-    </Section>
+    </Nav>
   )
 }
 
