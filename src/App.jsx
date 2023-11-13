@@ -1,10 +1,15 @@
 import Hero from './components/Hero'
-// import Navbar from './components/Navbar'
+// import Navbar_ from './components/Navbar'
 import About from './components/About'
 import Works from './components/Works'
 import Timeline from './components/Timeline'
 import Contact from './components/Contact'
 import styled from 'styled-components'
+
+// const Section = styled.section`
+//     height: 100vh;
+//     scroll-snap-align: center;
+// `
 
 const Container = styled.div`
   height: 100vh;
@@ -23,12 +28,15 @@ function App() {
 
   return (
     <Container>
-      {/* <Navbar /> */}
+      {/* <Section>
+      <Navbar_ />
+      </Section> */}
       <Hero />
       <About />
       <Works />
       <Timeline />
       <Contact />
+      
     </Container>
   )
 }
