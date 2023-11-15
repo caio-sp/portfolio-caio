@@ -4,12 +4,14 @@ import {  Nav, Offcanvas, Container, Navbar } from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
-const Left = styled.div`
-  flex: 1;
-  width: 100%;
+const List = styled.ul`
+  display: flex;
+  gap:20px;
+  list-style: none;
 `
-const Right = styled.div`
-  flex: 1;
+const ListItem = styled.li`
+  font-size: medium;
+  cursor: pointer;
 `
 
 const Logo = styled.img`
@@ -17,16 +19,25 @@ const Logo = styled.img`
 `
 
 
+
+
 const Navbar_ = () => {
   return (
    <>
     {[false].map((expand) => (
-      <Navbar key={expand} expand={expand} className="bg-dark mb-3">
+      <Navbar  key={expand}  data-bs-theme="dark" expand={expand} fixed="top" className=" mb-3">
         <Container fluid>
           <Navbar.Brand href="#">
-            <Logo src="./img/logoCaio.png" className="d-inline-block align-top px-2"  />
+            <Logo src="./img/logo.png" className="d-inline-block align-top ps-5"  />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+          {/* <List>
+            <ListItem>Home</ListItem>
+            <ListItem>About</ListItem>
+            <ListItem>Works</ListItem>
+            <ListItem>Timeline</ListItem>
+            <ListItem>Contact</ListItem>
+          </List> */}
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='me-4' />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${expand}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
