@@ -14,8 +14,8 @@ const Works = () => {
     <Section className="d-flex align-items-center justify-content-center">
       <Container fluid>
         <Row className='text-center'>
-          <Col className="col-12 col-md-6">About 1</Col>
-          <Col className="col-12 col-md-6">About 2</Col>
+          <Col className="col-12 col-md-6">Works - Left</Col>
+          <Col className="col-12 col-md-6">Works - Right</Col>
         </Row>
       </Container>
     </Section>
