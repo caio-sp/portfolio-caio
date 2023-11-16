@@ -1,52 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
+import {Row, Col, Container} from 'react-bootstrap'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 
 const Section = styled.section`
-    height: 100vh;
-    scroll-snap-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-`
-const Container = styled.div`
-    height: 100vh;
-    scroll-snap-align: center;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    
+  height: 100vh;
+  scroll-snap-align: center;
 `
 
-const Left = styled.div`
-    flex: 2;
-    /* text-align: right; */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-`
-
-const Right = styled.div`
-    flex: 2;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    text-align: center;
-`
 const Works = () => {
   return (
-    <Section>
-    <Container>
-      <Left>Works - Left</Left>
-      <Right>Works - Right</Right>
-    </Container>
-  </Section>
+    <Section className="d-flex align-items-center justify-content-center">
+      <Container fluid>
+        <Row className='text-center'>
+          <Col className="col-12 col-md-6">About 1</Col>
+          <Col className="col-12 col-md-6">About 2</Col>
+        </Row>
+      </Container>
+    </Section>
   )
 }
 

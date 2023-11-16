@@ -25,7 +25,7 @@ const Timeline = () => {
   return (
     <Section>
     <Container>
-      Timeline - Works
+      Timeline
     </Container>
   </Section>
   )

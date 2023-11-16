@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Map from './Map'
 
 
 const Section = styled.section`
@@ -44,7 +45,7 @@ const Contact = () => {
     <Section>
       <Container>
         <Left>Contact- Left </Left>
-        <Right>Contact - Right</Right>
+        <Right><Map/></Right>
       </Container>
     </Section>
   )
