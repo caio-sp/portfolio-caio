@@ -1,7 +1,9 @@
-import React from 'react'
+import { React, useState } from 'react'
 import styled from 'styled-components'
 import {Row, Col, Container, Stack} from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css";
+
+
 
 
 const Section = styled.section`
@@ -28,7 +30,7 @@ const ListItem = styled.li`
   position: relative;
 
   &:after{
-    content: "Skill - 1";
+    content: "${(props=> props.text)}";
     position: absolute;
     left: 0;
     color: pink;
@@ -50,6 +52,10 @@ const ListItem = styled.li`
   }
 `
 
+
+const itens = ["Skill - 1", "Skill - 2", "Skill - 3", "Skill - 4"];
+
+
 const About = () => {
   return (
     <Section className="d-flex align-items-center justify-content-center">
@@ -58,10 +64,11 @@ const About = () => {
           <Col className="col-12 col-md-6">
             <Stack gap={0}>
               <List>
-                <ListItem>Skill - 1</ListItem>
-                <ListItem>Skill - 2</ListItem>
-                <ListItem>Skill - 3</ListItem>
-                <ListItem>Skill - 4</ListItem>
+                {itens.map(item=>
+                
+                  <ListItem key={item} text={item}>{item}</ListItem>
+                  
+                  )}
               </List>
             </Stack>
           </Col>

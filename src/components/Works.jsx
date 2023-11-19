@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import {Row, Col, Container} from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 const Section = styled.section`
   height: 100vh;
   scroll-snap-align: center;
