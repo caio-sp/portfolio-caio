@@ -1,43 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Navbar_ from './Navbar';
+import { Container, Row, Col } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Section = styled.section`
     height: 100vh;
-    scroll-snap-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-`
-const Container = styled.div`
-    height: 100vh;
-    scroll-snap-align: center;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    
-`
-
-const Left = styled.div`
-    flex: 2;
-    /* text-align: right; */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    text-align: right;
-`
-
-const Right = styled.div`
-    flex: 3;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-`
+    scroll-snap-align: center;`
 
 const Astronaut = styled.img`
     width: 500px;
@@ -91,21 +60,23 @@ const Button = styled.button`
 
 const Hero = () => {
     return (
-        <Section>
+        <Section className="d-flex align-items-center justify-content-center">
             <Navbar_ />
-            <Container>
-                <Left>
-                    <Title>Think. Make. Solve.</Title>
-                    <WhatWeDo>
-                        <Line src="./img/line.png"/>
-                        <Subtitle>What we do</Subtitle>
-                    </WhatWeDo>
-                    <Description>we enjoy creating deligthful, human-centered digital experiences.</Description>
-                    <Button>Learn more</Button>
-                </Left>
-                <Right>
-                    <Astronaut src="./img/moon.png"></Astronaut>
-                </Right>
+            <Container fluid>
+                <Row className='text-center'>
+                    <Col className="col-12 col-md-6 position-relative">
+                        <Title>Think. Make. Solve.</Title>
+                        <WhatWeDo>
+                            <Line src="./img/line.png"/>
+                            <Subtitle>What we do</Subtitle>
+                        </WhatWeDo>
+                        <Description>we enjoy creating deligthful, human-centered digital experiences.</Description>
+                        <Button>Learn more</Button>
+                    </Col>
+                    <Col className="col-12 col-md-6 position-relative">
+                        <Astronaut src="./img/moon.png"></Astronaut>
+                    </Col>
+                </Row>
             </Container>
         </Section>
     )
