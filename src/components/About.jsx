@@ -53,10 +53,13 @@ const ListItem = styled.li`
 `
 
 
-const itens = ["Skill - 1", "Skill - 2", "Skill - 3", "Skill - 4"];
+const itens = ["Skill - 0", "Skill - 1", "Skill - 2", "Skill - 3"];
 
 
 const About = () => {
+  
+  const [skill, setSkill] = useState(0); 
+
   return (
     <Section className="d-flex align-items-center justify-content-center">
       <Container fluid>
@@ -66,13 +69,13 @@ const About = () => {
               <List>
                 {itens.map(item=>
                 
-                  <ListItem key={item} text={item}>{item}</ListItem>
+                  <ListItem key={itens.indexOf(item)} text={item} onClick={() => setSkill(itens.indexOf(item))}>{item}</ListItem>
                   
                   )}
               </List>
             </Stack>
           </Col>
-          <Col className="col-12 col-md-6">About - Lado Direito</Col>
+          <Col className="col-12 col-md-6">About - Lado Direito {skill}</Col>
         </Row>
       </Container>
     </Section>
